@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Love light";
+      src: url("./LoveLight-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: "Love light";
+      background-color: rgb(204 127 182);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 600px;
+      background-color: pink;
+      border-radius: 50%;
+      filter: blur(100px);
+    }
+
+    .letter {
+      position: relative;
+      border-radius: 20px;
+      padding: 1em;
+      background-color: #f1f1f1;
+      z-index: 1;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .letter-title {
+      font-size: 3em;
+    }
+
+    .letter-content {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+    #wrapper {
+    top: -35px;
+    position: absolute;
+    right: -15px;
+    animation: pulse 1s infinite;
+}
+
+    #pulsingheart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+    }
+
+    #pulsingheart:before,
+    #pulsingheart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: #aa0000;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      animation: pulsecolor 1s infinite;
+    }
+
+    #pulsingheart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+      animation: pulsecolor 1s infinite;
+    }
+
+    @keyframes pulse {
+      10% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes pulsecolor {
+      10% {
+        background: #dd0000;
+      }
+    }
+  </style>
+  <body>
+    <div class="background"></div>
+    <div class="letter">
+      <div id="wrapper">
+        <div id="pulsingheart"></div>
+      </div>
+      <h1 class="letter-title">Dear Love</h1>
+      <p class="letter-content">
+        Happy valentine's day dear! Thank you for being with me all this time, you have made me super happy and I really appreciate you a lot! you made me believe in love again and hope i can spend all my days next to you.
+      </p>
+    </div>
+  </body>
+</html>
